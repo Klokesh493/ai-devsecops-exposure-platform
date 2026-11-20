@@ -1,0 +1,40 @@
+{
+  "now": 10000,
+  "sbom": {
+    "roots": [
+      "web"
+    ],
+    "components": [
+      {
+        "ref": "web",
+        "name": "web",
+        "version": "1.0.0"
+      },
+      {
+        "ref": "parser",
+        "name": "parser",
+        "version": "1.0.0"
+      },
+      {
+        "ref": "dev-tool",
+        "name": "dev-tool",
+        "version": "1.0.0"
+      }
+    ],
+    "dependencies": [
+      {
+        "source": "web",
+        "target": "parser"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "SYNTHETIC-2026-001",
+      "component": "parser",
+      "severity": "MEDIUM",
+      "fixed_version": "1.0.1"
+    }
+  ],
+  "waivers": []
+}

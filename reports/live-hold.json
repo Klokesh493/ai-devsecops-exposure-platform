@@ -1,0 +1,101 @@
+{
+  "blocking_count": 1,
+  "citations": [
+    "sbom",
+    "findings",
+    "waivers"
+  ],
+  "decision": "security_hold",
+  "evidence": {
+    "findings": {
+      "data": [
+        {
+          "component": "parser",
+          "fixed_version": "1.0.1",
+          "id": "SYNTHETIC-2026-001",
+          "severity": "CRITICAL"
+        }
+      ],
+      "id": "findings",
+      "sha256": "4a7bcf642440cb016e53f31f07058bb4d642943ffcce41ef4106dca5593aada6"
+    },
+    "sbom": {
+      "data": {
+        "components": [
+          {
+            "name": "web",
+            "ref": "web",
+            "version": "1.0.0"
+          },
+          {
+            "name": "parser",
+            "ref": "parser",
+            "version": "1.0.0"
+          },
+          {
+            "name": "dev-tool",
+            "ref": "dev-tool",
+            "version": "1.0.0"
+          }
+        ],
+        "dependencies": [
+          {
+            "source": "web",
+            "target": "parser"
+          }
+        ],
+        "roots": [
+          "web"
+        ]
+      },
+      "id": "sbom",
+      "sha256": "b76eaca57f922ca988a2cf6aff2f8da2c84d118f8f466e91af3107667c6293ff"
+    },
+    "waivers": {
+      "data": {
+        "now": 10000,
+        "records": []
+      },
+      "id": "waivers",
+      "sha256": "0bf410d4ddbf0ee225923d132a8037ead34f4052a60dc823943f49ca99d2158e"
+    }
+  },
+  "exposure": [
+    {
+      "blocking": true,
+      "component": "parser",
+      "fixed_version": "1.0.1",
+      "id": "SYNTHETIC-2026-001",
+      "path": [
+        "web",
+        "parser"
+      ],
+      "reachable": true,
+      "severity": "CRITICAL",
+      "waived": false
+    }
+  ],
+  "missing": [],
+  "model": "qwen2.5:0.5b",
+  "planner": "ollama",
+  "ready": false,
+  "reason": "Reachable high or critical findings need remediation or an active waiver.",
+  "stop": "evidence_complete",
+  "trace": [
+    {
+      "event": "observed",
+      "source": "findings",
+      "step": 1
+    },
+    {
+      "event": "observed",
+      "source": "waivers",
+      "step": 2
+    },
+    {
+      "event": "observed",
+      "source": "sbom",
+      "step": 3
+    }
+  ]
+}

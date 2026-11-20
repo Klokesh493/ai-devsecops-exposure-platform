@@ -1,0 +1,22 @@
+{
+  "tests": 27,
+  "replay_scenarios": 5,
+  "model_runs": 2,
+  "http_demo": {
+    "decision": "security_ready",
+    "state": "exported",
+    "mode": "replay",
+    "files": [
+      "remediation-review.json"
+    ],
+    "hec": {
+      "accepted": 3,
+      "attempted": 3,
+      "pending": 0
+    }
+  },
+  "promtool_rules": "passed",
+  "config_parse": "passed",
+  "live_prometheus_scrape": "passed",
+  "source_sha256": "034e798cc00eee6b3936c19d830e6d214c140f9aa3f0c5ba2b1af47727c33774"
+}

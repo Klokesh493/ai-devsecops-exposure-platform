@@ -1,0 +1,27 @@
+[
+  {
+    "name": "exposed",
+    "input": "exposed.json",
+    "expected": "security_hold"
+  },
+  {
+    "name": "active-waiver",
+    "input": "active-waiver.json",
+    "expected": "security_ready"
+  },
+  {
+    "name": "expired-waiver",
+    "input": "expired-waiver.json",
+    "expected": "security_hold"
+  },
+  {
+    "name": "unreachable",
+    "input": "unreachable.json",
+    "expected": "security_ready"
+  },
+  {
+    "name": "medium-only",
+    "input": "medium-only.json",
+    "expected": "security_ready"
+  }
+]

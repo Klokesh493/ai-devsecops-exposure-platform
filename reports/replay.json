@@ -1,0 +1,32 @@
+[
+  {
+    "name": "exposed",
+    "expected": "security_hold",
+    "decision": "security_hold",
+    "passed": true
+  },
+  {
+    "name": "active-waiver",
+    "expected": "security_ready",
+    "decision": "security_ready",
+    "passed": true
+  },
+  {
+    "name": "expired-waiver",
+    "expected": "security_hold",
+    "decision": "security_hold",
+    "passed": true
+  },
+  {
+    "name": "unreachable",
+    "expected": "security_ready",
+    "decision": "security_ready",
+    "passed": true
+  },
+  {
+    "name": "medium-only",
+    "expected": "security_ready",
+    "decision": "security_ready",
+    "passed": true
+  }
+]

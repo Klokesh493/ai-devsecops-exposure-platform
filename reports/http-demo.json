@@ -1,0 +1,13 @@
+{
+  "decision": "security_ready",
+  "state": "exported",
+  "mode": "replay",
+  "files": [
+    "remediation-review.json"
+  ],
+  "hec": {
+    "accepted": 3,
+    "attempted": 3,
+    "pending": 0
+  }
+}
