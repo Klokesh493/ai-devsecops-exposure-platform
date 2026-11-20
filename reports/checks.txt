@@ -6,9 +6,11 @@
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-27 passed, 1 warning in 0.27s
+28 passed, 1 warning in 0.27s
 /Users/loki/Documents/Codex/2026-11-12/you-are-my-senior-staff-engineer/work/ai-platforms/venv312/bin/python tools/replay.py
 5/5 scenarios passed
 /Users/loki/Documents/Codex/2026-11-12/you-are-my-senior-staff-engineer/work/ai-platforms/venv312/bin/python -m ruff check .
 All checks passed!
 /Users/loki/Documents/Codex/2026-11-12/you-are-my-senior-staff-engineer/work/ai-platforms/venv312/bin/python -m bandit -q -ll -ii -r ops_platform tools
+
+Missing Trivy scanner-result regression passed after importer hardening.

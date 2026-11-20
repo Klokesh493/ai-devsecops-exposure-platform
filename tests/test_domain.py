@@ -36,3 +36,10 @@ def test_cyclonedx_trivy_import():
          "InstalledVersion": "1.0.0", "FixedVersion": "1.0.1", "Severity": "HIGH"}]}]}
     case = convert(sbom, scan, 100, ["web"])
     assert evaluate(case)["decision"] == "security_hold"
+
+def test_missing_scanner_export_cannot_become_a_clean_report():
+    from tools.import_scans import convert
+    sbom = {"bomFormat": "CycloneDX", "components": [
+        {"bom-ref": "web", "name": "web", "version": "1.0.0"}]}
+    with pytest.raises(ValueError, match="scanner results"):
+        convert(sbom, {}, 100, ["web"])

@@ -4,7 +4,7 @@ Verified on November 19, 2026 using Python 3.12.16.
 
 | Check | Result |
 | --- | --- |
-| Domain and API tests | 27 passed |
+| Domain and API tests | 28 passed |
 | Labeled replay scenarios | 5 passed |
 | Real local Qwen model runs | Passing and held cases returned complete evidence |
 | Real HTTP API demo | Evaluation, idempotent retry, approval, export and bundle retrieval passed |

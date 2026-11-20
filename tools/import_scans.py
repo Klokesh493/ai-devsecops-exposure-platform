@@ -24,8 +24,13 @@ def convert(sbom, scan, now, roots):
         if pair in lookup:
             raise ValueError("package name and version are ambiguous")
         lookup[pair] = component["ref"]
+    results = scan.get("Results")
+    if not isinstance(results, list) or not results:
+        raise ValueError("Trivy export must contain scanner results")
+    if any(not isinstance(result, dict) or not result.get("Target") for result in results):
+        raise ValueError("each Trivy result must identify its scanned target")
     findings = {}
-    for result in scan.get("Results", []):
+    for result in results:
         for item in result.get("Vulnerabilities", []) or []:
             pair = item["PkgName"], item["InstalledVersion"]
             if pair not in lookup:
